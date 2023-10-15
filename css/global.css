@@ -1,0 +1,127 @@
+/** Se aplica a todo, parecido al asterisco **/
+:root {
+    --main-c: rgb(200, 127, 18);
+    --black-c: #000;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    /** la pagina se bugea **/
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, rgba(0,0,0, 0.4), rgba(0,0,0,0.7)), url(/img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+/* TOP NAVIGATION */
+
+.navigation {
+    padding: 0;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1rem;
+}
+
+.inline-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-title {
+    display: none;
+    font-size: 1.2rem;
+    padding-left: 0.8rem;
+}
+
+.logo-header {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.collapsable-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 29;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.collapsable-menu .highlight {
+    display: inline;
+    align-items: center;
+    padding: .5rem 1rem;
+    background-color: var(--main-c);
+    color: #fff;
+}
+
+.menu-item {
+    display: flex;
+    margin: .75rem;
+    padding: .5rem 1rem;
+    color: #fff;
+}
+
+.menu-item:hover {
+    color: var(--main-c);
+}
+
+.section {
+    margin: 0 auto;
+	margin-top: 5rem;
+	background: #fff;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	max-width: 768px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+@media (min-width: 400px) {
+    .nav-title {
+        display: inline;
+    }
+}
+
+@media (min-width: 768px) {
+    .collapsable-button, .collapsable-container {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .inline-menu {
+        display: none;
+    }
+}
